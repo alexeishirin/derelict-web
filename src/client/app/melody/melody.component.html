@@ -1,0 +1,31 @@
+<div>
+  <md-grid-list cols="4" rowHeight="250px">
+    <md-grid-tile *ngFor="let category of categories" [colspan]="category.cols" [rowspan]="category.rows" (click)="play(category)"
+                  [style.background]="category.titleClass" [ngClass]="{inactive: (selectedCategory && selectedCategory !== category) || (category && category.songs.length == 0)}">
+      {{category.name}}
+    </md-grid-tile>
+  </md-grid-list>
+</div>
+
+<!-- The overlay -->
+<div class="overlay" [style.height]="overlayHeight">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" (click)="stopPlaying()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <div>
+      <md-icon (click)="play()"  class="playback-action" *ngIf="!isPlaying">play_circle_outline</md-icon>
+      <!--<button (click)="play()" md-raised-button class="md-raised md-primary">play</button>-->
+    </div>
+    <div>
+      <md-icon (click)="pause()" class="playback-action" *ngIf="isPlaying">pause_circle_outline</md-icon>
+      <!--<button (click)="pause()" md-raised-button class="md-raised md-primary">pause</button>-->
+    </div>
+    <div *ngFor="let response of responses">
+      <button (click)="responseWon(response)" md-raised-button class="md-raised md-primary">{{response.name}}</button>
+    </div>
+  </div>
+
+</div>
