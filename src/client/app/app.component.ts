@@ -7,7 +7,7 @@ import { Config } from './shared/index';
  */
 @Component({
   moduleId: module.id,
-  selector: 'melody-app',
+  selector: 'derelict-app',
   templateUrl: 'app.component.html',
 })
 

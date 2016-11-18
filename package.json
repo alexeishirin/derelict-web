@@ -1,7 +1,7 @@
 {
-  "name": "angular2-seed",
+  "name": "Derelict",
   "version": "0.0.0",
-  "description": "Modular seed project for Angular 2 apps with fast, statically typed build",
+  "description": "Derelict web interface",
   "repository": {
     "url": "https://github.com/mgechev/angular2-seed"
   },
