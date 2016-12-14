@@ -1,0 +1,19 @@
+<div class="map-container">
+  <md-card>
+    <md-card-content>
+      <div layout="row" layout-align="end" class="add-map-button-container">
+        <button md-raised-button color="primary" [routerLink]="['edit', 'new']">Add Map</button>
+      </div>
+      <table class="w3-table w3-table-all w3-hoverable">
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+        </tr>
+        <tr *ngFor="let map of maps" [routerLink]="['edit', map.id]">
+          <td>{{map.id}}</td>
+          <td>{{map.name}}</td>
+        </tr>
+      </table>
+    </md-card-content>
+  </md-card>
+</div>

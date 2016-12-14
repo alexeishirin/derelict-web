@@ -1,0 +1,10 @@
+<div class="full-page">
+<md-card flex-gt-xs="50" flex-offset-gt-xs="25">
+  <md-card-content layout-gt-xs="column" layout-align-gt-xs="center">
+    <h2>Please log in</h2>
+    <md-input placeholder="Login" [(ngModel)]="username"></md-input>
+    <md-input placeholder="Password" type="password" [(ngModel)]="password"></md-input>
+    <button md-raised-button color="primary" (click)="login()">Log In</button>
+  </md-card-content>
+</md-card>
+</div>

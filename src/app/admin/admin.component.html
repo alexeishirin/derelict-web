@@ -1,0 +1,16 @@
+<md-card class="header">
+  <div class="logo-wrapper">
+    <img class="logo-image cursor-pointer" src="assets/derelictLogo.png" alt="derelict">
+  </div>
+  <md-tab-group (selectChange)="loadTab($event)" *ngIf="tabs.length">
+    <md-tab *ngFor="let tab of tabs" [label]="tab.label"></md-tab>
+  </md-tab-group>
+  <div layout="row" *ngIf="!tabs.length">
+    <md-icon (click)="goBack()">arrow_back</md-icon>
+    <h3>{{pageTitle}}</h3>
+  </div>
+</md-card>
+<router-outlet></router-outlet>
+<md-card class="footer">
+  <div app-footer></div>
+</md-card>

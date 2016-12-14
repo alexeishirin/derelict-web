@@ -1,9 +1,10 @@
-import { Route } from '@angular/router';
+import { Route} from '@angular/router';
 import { LandingComponent } from './landing.component';
 
-export const LandingRoutes: Route[] = [
+export const routes : Route[] = [
   {
     path: '**',
-    component: LandingComponent
+    component: LandingComponent,
+    canActivate: []
   }
 ];

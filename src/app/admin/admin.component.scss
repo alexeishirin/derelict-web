@@ -1,0 +1,28 @@
+:host {
+  min-height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+.logo-wrapper {
+  width: 120px;
+}
+nav a.router-link-active {
+  color: #1de9b6;
+}
+.logo-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.header {
+  padding-bottom: 0;
+  flex: 0 1 auto;
+}
+.footer {
+  flex: 0 1 auto;
+}
+
+/deep/ .md-tab-header {
+  justify-content: center;
+}
