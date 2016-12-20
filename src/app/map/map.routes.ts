@@ -1,3 +1,4 @@
+import { ModuleWithProviders} from '@angular/core'
 import { Route, RouterModule } from '@angular/router';
 import {MapComponent} from "./map.component";
 import {EditMapComponent} from "./edit-map/edit-map.component";
