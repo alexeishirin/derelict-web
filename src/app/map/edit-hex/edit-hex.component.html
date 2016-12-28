@@ -1,0 +1,12 @@
+<div class="map-container">
+  <md-card>
+    <md-card-content>
+      <md-input placeholder="X" [(ngModel)]="hex.x"></md-input>
+      <md-input placeholder="Y" [(ngModel)]="hex.y"></md-input>
+      <md-input placeholder="Type" [(ngModel)]="hex.type"></md-input>
+      <div layout="row" layout-align="end">
+        <button md-raised-button color="primary" (click)="save()">Save</button>
+      </div>
+    </md-card-content>
+  </md-card>
+</div>

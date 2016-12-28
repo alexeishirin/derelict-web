@@ -1,0 +1,21 @@
+<div layout="row" layout-align="end" class="add-hex-button-container">
+  <button md-raised-button color="primary" [routerLink]="['hexes', 'new', 'edit']">Add Hex</button>
+</div>
+<table class="w3-table w3-table-all w3-hoverable" *ngIf="hexes && hexes.length">
+  <tr>
+    <th>Id</th>
+    <th>X</th>
+    <th>Y</th>
+    <th>Type</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let hex of hexes">
+    <td>{{hex.id}}</td>
+    <td>{{hex.x}}</td>
+    <td>{{hex.y}}</td>
+    <td>{{hex.type}}</td>
+    <td>
+      <md-icon [routerLink]="['hexes', hex.id, 'edit']">edit</md-icon>
+      <md-icon (click)="deleteHex($event, hex)">delete</md-icon></td>
+  </tr>
+</table>

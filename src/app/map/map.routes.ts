@@ -2,6 +2,8 @@ import { ModuleWithProviders} from '@angular/core'
 import { Route, RouterModule } from '@angular/router';
 import {MapComponent} from "./map.component";
 import {EditMapComponent} from "./edit-map/edit-map.component";
+import {MapDetailsComponent} from "./map-details/map-details.component";
+import {EditHexComponent} from "./edit-hex/edit-hex.component";
 
 const routes : Route[] = [
   {
@@ -9,8 +11,16 @@ const routes : Route[] = [
     component: MapComponent,
   },
   {
-    path: 'edit/:id',
+    path: ':mapId/edit',
     component: EditMapComponent
+  },
+  {
+    path: ':mapId',
+    component: MapDetailsComponent
+  },
+  {
+    path: ':mapId/hexes/:hexId/edit',
+    component: EditHexComponent
   }
 ];
 

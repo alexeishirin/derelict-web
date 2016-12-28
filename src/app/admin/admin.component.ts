@@ -22,7 +22,7 @@ export class AdminComponent implements OnInit {
 
   tabs;
   pageTitle:string;
-  
+
   currentUrl:string;
   previousUrl:string;
 
@@ -46,21 +46,29 @@ export class AdminComponent implements OnInit {
   }
 
   getTabsForState(url : string) {
-    if (url == '/admin/map/edit'){
+    if (url.indexOf('map') != -1 && url.indexOf('edit') != -1){
+      return [];
+    }
+
+    if (url.indexOf('map/') != -1 && url.indexOf('edit') == -1){
       return [];
     }
 
     return this.defaultTabs;
   }
-  
+
   getPageTitle (url: string) : string {
-    if (url == '/admin/map/edit'){
+    if (url.indexOf('map') != -1 && url.indexOf('edit') != -1){
       return 'Edit Map';
     }
-    
+
+    if (url.indexOf('map/') != -1 && url.indexOf('edit') == -1){
+      return 'Map Details';
+    }
+
     return '';
   }
-  
+
   goBack() {
     if(this.previousUrl) {
       this.router.navigate([this.previousUrl]);
@@ -68,5 +76,5 @@ export class AdminComponent implements OnInit {
       this.router.navigate(['/admin/map']);
     }
   }
-  
+
 }

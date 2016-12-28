@@ -32,4 +32,9 @@ export class MapComponent implements OnInit, OnDestroy {
         }
       )
   }
+  
+  deleteMap($event, map:Map) {
+    $event.stopPropagation();
+    this.mapsStoreService.deleteMap(map);
+  }
 }

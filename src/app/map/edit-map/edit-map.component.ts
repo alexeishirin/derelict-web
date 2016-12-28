@@ -26,7 +26,7 @@ export class EditMapComponent implements OnInit, OnDestroy {
   
   getMap() {
     this.mapSubscription = this.route.params
-      .map(params => params['id'])
+      .map(params => params['mapId'])
       .switchMap(id => this.mapsStoreService.getMap(id))
       .subscribe(map => this.map = map);
   }

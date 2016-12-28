@@ -1,0 +1,16 @@
+:host {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+.hex-container {
+  padding: 40px;
+  flex: 1 1 auto;
+
+  background: #304352; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #90a3b2 , #c7c2bc); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #90a3b2 , #c7c2bc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+md-input {
+  width:100%;
+}

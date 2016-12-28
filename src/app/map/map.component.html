@@ -8,10 +8,14 @@
         <tr>
           <th>Id</th>
           <th>Name</th>
+          <th>Actions</th>
         </tr>
-        <tr *ngFor="let map of maps" [routerLink]="['edit', map.id]">
+        <tr *ngFor="let map of maps" [routerLink]="[map.id]">
           <td>{{map.id}}</td>
           <td>{{map.name}}</td>
+          <td>
+            <md-icon [routerLink]="[map.id, 'edit']">edit</md-icon>
+            <md-icon (click)="deleteMap($event, map)">delete</md-icon></td>
         </tr>
       </table>
     </md-card-content>
